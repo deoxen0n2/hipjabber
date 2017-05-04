@@ -1,0 +1,4 @@
+export default {
+  baseURL: 'https://[your-team-name].hipchat.com/v2',
+  authToken: 'auth_token_here'
+}

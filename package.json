@@ -1,0 +1,40 @@
+{
+  "name": "hipjabber",
+  "version": "0.3.0",
+  "description": "A promise-based HipChat NodeJS client",
+  "main": "lib/index.js",
+  "author": "Saran Siriphantnon",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deoxen0n2/hipjabber"
+  },
+  "scripts": {
+    "compile": "babel src -d lib",
+    "prepublish": "yarn compile",
+    "test": "tape -r babel-register test/unit/**/*.js | tap-spec",
+    "test-integration": "tape -r babel-register test/integration/**/*.js | tap-spec",
+    "test-integration-messages": "tape -r babel-register test/integration/messages.js | tap-spec",
+    "test-integration-notifications": "tape -r babel-register test/integration/notifications.js | tap-spec"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "rexource": "^0.5.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-register": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  }
+}
